@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default revision="dylan" sync-j="4"/>
+
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://github.com/lipro" name="lipro"/>
+
+  <project remote="yocto" revision="dylan" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="dylan" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+
+  <project remote="lipro" revision="master" name="tqs-community-bsp-base" path="sources/base">
+	<copyfile dest="README.md" src="README.md"/>
+	<copyfile dest="setup-environment" src="setup-environment"/>
+  </project>
+
+  <project remote="lipro" revision="master" name="meta-tqs-arm" path="sources/meta-tqs-arm"/>
+
+</manifest>
